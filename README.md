@@ -1,5 +1,7 @@
 # DistroHopper Wheel of Fortune
 
+![Title Image](src/assets/title.jpg)
+
 Welcome to the DistroHopper Wheel of Fortune! This project is a fun and interactive way to decide which Linux distribution you should try next. Built with React and Vite, it features a spinning wheel that randomly selects a Linux distro for you.
 
 ## Table of Contents

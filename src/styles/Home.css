@@ -27,3 +27,22 @@
     font-size: 10px;
   }
 }
+
+@keyframes shiny-sprinkles {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.source-text {
+  font-weight: 900;
+  margin-right: 6rem;
+  background: linear-gradient(90deg, #f3ec78, #af4261, #f3ec78, #42a5f5, #66bb6a, #ff7043, #ab47bc, #f3ec78);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shiny-sprinkles 25s linear infinite;
+}

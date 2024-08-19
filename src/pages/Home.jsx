@@ -87,12 +87,13 @@ const Home = () => {
     <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
       <GlobalStyles />
       <ThemeProvider theme={original}>
-        <AppBar>
+        <AppBar style={{zIndex: 1000}}>
           <Toolbar style={{ justifyContent: 'space-between', flexWrap: 'wrap' }}>
             <div style={{ display: 'flex', alignItems: 'center' }}>
               <Button variant="menu" size="sm">
                 Start
               </Button>
+
               <Checkbox
                 label="Easy Mode"
                 checked={easyMode}
@@ -106,6 +107,9 @@ const Home = () => {
                 style={{ marginLeft: '10px' }}
               />
             </div>
+            <div className="source-text">
+              <a href="https://github.com/halsschmerzen/distrohopper-wheel"> ★ Leave a star on GitHub! I would really appreciate it ^-^ ★ </a>
+             </div>
             <div style={{ display: 'flex', alignItems: 'center' }}>
               <Button variant="menu" size="sm">
                 File
@@ -120,7 +124,7 @@ const Home = () => {
                 Help
               </Button>
               {showHelpMenu && (
-                <MenuList style={{ position: 'absolute', right: '10px', top: '40px', zIndex: 100 }}>
+                <MenuList style={{ position: 'absolute', right: '10px', top: '40px', zIndex: 1000 }}>
                   <MenuListItem onClick={() => handleMenuItemClick('https://github.com/halsschmerzen/distrohopper-wheel/issues')}>
                     Report a bug
                   </MenuListItem>

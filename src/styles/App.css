@@ -18,11 +18,16 @@ html, body {
   width: 100vw;
   padding: 20px;
   box-sizing: border-box;
+  position: relative; 
 }
 
 .bottom-text {
   text-align: center;
   margin-top: -18px;
+  position: absolute; 
+  bottom: 10px; 
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 @media (max-width: 768px) {
@@ -35,7 +40,3 @@ html, body {
   }
 }
 
-.source-text {
-  font-weight: 900;
-  text-decoration: underline;
-}

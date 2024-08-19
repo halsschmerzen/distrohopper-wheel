@@ -1,14 +1,10 @@
 import React from 'react';
 import Home from './pages/Home';
-import backgroundImage from './assets/wp.jpg';
 import './styles/App.css';
 
 function App() {
   return (
-      <div className="app-container" style={{ 
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundRepeat: 'repeat',
-      }}>
+    <div className="app-container">
       <Home />
       <div className="bottom-text">
         Made with love on EndeavourOS by <a href="https://github.com/halsschmerzen">halsschmerzen</a>

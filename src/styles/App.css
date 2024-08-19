@@ -5,6 +5,7 @@
   align-items: center;
   background-size: cover;
   background-position: center;
+  background-repeat: repeat;
   height: 100vh;
   width: 100vw;
   padding: 20px;

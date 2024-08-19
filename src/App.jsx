@@ -5,9 +5,10 @@ import './styles/App.css';
 
 function App() {
   return (
-    <div className="app-container" style={{ 
-      backgroundImage: `url(${backgroundImage})`
-    }}>
+      <div className="app-container" style={{ 
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundRepeat: 'repeat',
+      }}>
       <Home />
       <div className="bottom-text">
         Made with love on EndeavourOS by <a href="https://github.com/halsschmerzen">halsschmerzen</a>

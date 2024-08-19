@@ -13,6 +13,7 @@ html, body {
   background-size: cover;
   background-position: center;
   background-repeat: repeat;
+  background-image: url('../assets/wp.jpg');
   height: 100vh;
   width: 100vw;
   padding: 20px;

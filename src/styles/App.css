@@ -1,7 +1,8 @@
-* {
+html, body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  height: 100%;
+  overflow: hidden; 
 }
 
 .app-container {
@@ -9,11 +10,10 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-image: url('../assets/wp.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: repeat;
-  min-height: 100vh;
+  height: 100vh;
   width: 100vw;
   padding: 20px;
   box-sizing: border-box;
@@ -21,9 +21,7 @@
 
 .bottom-text {
   text-align: center;
-  margin-top: 20px;
-  width: 100%;
-  word-wrap: break-word;
+  margin-top: -18px;
 }
 
 @media (max-width: 768px) {

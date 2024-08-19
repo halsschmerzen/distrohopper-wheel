@@ -69,29 +69,19 @@ const Home = () => {
     setShowHelpMenu(false);
   };
 
-const handleEasyModeChange = () => {
-  setEasyMode(!easyMode);
-  if (!easyMode) {
-    setSuperEasyMode(false);
-    setOverKillMode(false);
-  }
-};
+  const handleEasyModeChange = () => {
+    setEasyMode(!easyMode);
+    if (!easyMode) {
+      setSuperEasyMode(false);
+    }
+  };
 
-const handleSuperEasyModeChange = () => {
-  setSuperEasyMode(!superEasyMode);
-  if (!superEasyMode) {
-    setEasyMode(false);
-    setOverKillMode(false);
-  }
-};
-
-const handleOverKillModeChange = () => {
-  setOverKillMode(!overKillMode);
-  if (!overKillMode) {
-    setEasyMode(false);
-    setSuperEasyMode(false);
-  }
-};
+  const handleSuperEasyModeChange = () => {
+    setSuperEasyMode(!superEasyMode);
+    if (!superEasyMode) {
+      setEasyMode(false);
+    }
+  };
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
@@ -99,10 +89,10 @@ const handleOverKillModeChange = () => {
       <ThemeProvider theme={original}>
         <AppBar>
           <Toolbar style={{ justifyContent: 'space-between', flexWrap: 'wrap' }}>
-            <Button variant="menu" size="sm">
-              Start
-            </Button>
-            <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <Button variant="menu" size="sm">
+                Start
+              </Button>
               <Checkbox
                 label="Easy Mode"
                 checked={easyMode}
@@ -116,7 +106,6 @@ const handleOverKillModeChange = () => {
                 style={{ marginLeft: '10px' }}
               />
             </div>
-
             <div style={{ display: 'flex', alignItems: 'center' }}>
               <Button variant="menu" size="sm">
                 File

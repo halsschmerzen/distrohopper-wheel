@@ -1,0 +1,54 @@
+ .window-content-p {
+  text-align: left;
+  margin: 20px 0;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #333;
+}
+
+.result-window p {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #444;
+}
+
+.result-window-p-info {
+  font-weight: bold;
+}
+/* Idk why but this messes up the topbar, so I'm leaving the styling to each Div for now
+.menu-list {
+  position: absolute;
+  right: 10px;
+  top: 40px;
+  z-index: 100;
+}
+
+.window {
+  flex: 1;
+  margin: 100px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.result-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  z-index: 10;
+}
+
+.confetti {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+} */

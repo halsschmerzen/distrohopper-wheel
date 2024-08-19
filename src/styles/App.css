@@ -1,0 +1,16 @@
+.app-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .bottom-text {
+    font-family: 'ms_sans_serif';
+    text-align: center;
+    padding: 10px;
+  }
+
+  .bottom-text a {
+    font-weight: bold;
+    font-style: italic;
+  }

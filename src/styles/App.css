@@ -1,16 +1,32 @@
 .app-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .bottom-text {
-    font-family: 'ms_sans_serif';
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.bottom-text {
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .app-container {
     padding: 10px;
   }
 
-  .bottom-text a {
-    font-weight: bold;
-    font-style: italic;
+  .bottom-text {
+    font-size: 14px;
   }
+}
+
+.source-text {
+  font-weight: 900;
+  text-decoration: underline;
+}

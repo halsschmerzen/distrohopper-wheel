@@ -35,6 +35,17 @@ const GlobalStyles = createGlobalStyle`
     display: flex;
     flex-direction: column;
   }
+  @media (max-width: 768px) {
+    .window-content-p {
+      font-size: 12px;
+    }
+    .result-window-p {
+      font-size: 12px;
+    }
+    .result-window-p-info {
+      font-size: 10px;
+    }
+  }
 `;
 
 const Home = () => {
@@ -87,11 +98,11 @@ const handleOverKillModeChange = () => {
       <GlobalStyles />
       <ThemeProvider theme={original}>
         <AppBar>
-          <Toolbar style={{ justifyContent: 'space-between' }}>
+          <Toolbar style={{ justifyContent: 'space-between', flexWrap: 'wrap' }}>
             <Button variant="menu" size="sm">
               Start
             </Button>
-            <div style={{ display: 'flex', alignItems: 'center' }}>
+            <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
               <Checkbox
                 label="Easy Mode"
                 checked={easyMode}
@@ -121,6 +132,9 @@ const handleOverKillModeChange = () => {
               </Button>
               {showHelpMenu && (
                 <MenuList style={{ position: 'absolute', right: '10px', top: '40px', zIndex: 100 }}>
+                  <MenuListItem onClick={() => handleMenuItemClick('https://github.com/halsschmerzen/distrohopper-wheel/issues')}>
+                    Report a bug
+                  </MenuListItem>
                   <MenuListItem onClick={() => handleMenuItemClick('https://github.com/halsschmerzen')}>
                     Check out my GitHub =)!
                   </MenuListItem>
@@ -151,13 +165,13 @@ const handleOverKillModeChange = () => {
           </WindowContent>
           {showResultWindow && (
             <>
-              <Window style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '500px', zIndex: 10 }}>
+              <Window style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '90%', maxWidth: '500px', zIndex: 10 }}>
                 <WindowHeader>
                   <span>Your wonderful, amazing, perfect result!</span>
                   <Button onClick={handleCloseResultWindow} style={{ float: 'right' }}>X</Button>
                 </WindowHeader>
                 <WindowContent style={{ display: 'flex', alignItems: 'center' }}>
-                  <img src={Tux} alt="Tux" style={{ width: '150px', height: '150px', marginRight: '10px' }} />
+                  <img src={Tux} alt="Tux" style={{ width: '100px', height: '100px', marginRight: '10px' }} />
                   <div>
                     <p className="result-window-p">{`You won: ${result}`}</p>
                     <p className="result-window-p">{descriptions[result]}</p>

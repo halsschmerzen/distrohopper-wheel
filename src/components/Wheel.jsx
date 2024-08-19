@@ -23,7 +23,7 @@ const WheelComponent = ({ setResult, easyMode, superEasyMode }) => {
   };
 
   return (
-    <div style={{ textAlign: 'center' }}>
+    <div style={{ textAlign: 'center', margin: '0 auto' }}>
       <Wheel
         mustStartSpinning={mustSpin}
         prizeNumber={prizeNumber}
@@ -40,7 +40,6 @@ const WheelComponent = ({ setResult, easyMode, superEasyMode }) => {
         perpendicularText={false}
         textDistance={65}
         onStopSpinning={handleStopSpinning}
-        
       />
       <Button onClick={handleSpinClick} disabled={mustSpin} style={{ marginTop: "20px" }}>
         May luck decide your fate!

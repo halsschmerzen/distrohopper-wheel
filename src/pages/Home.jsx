@@ -158,7 +158,7 @@ const Home = () => {
                     <p className="result-window-p">{`You won: ${result}`}</p>
                     <p className="result-window-p">{descriptions[result]}</p>
                     <br/>
-                    <p className="result-window-p-info">Here could be a little pixelart of each Distro, but I haven't found a nice collection of Linux Distro pixelarts! =(! So for now enjoy the little tux.</p>
+                    <p className="result-window-p-info">Here could be a little pixelart of each Distro, but I haven&apos;t found a nice collection of Linux Distro pixelarts! =(! So for now enjoy the little tux.</p>
                   </div>
                 </WindowContent>
               </Window>

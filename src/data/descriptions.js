@@ -18,6 +18,7 @@ const descriptions = {
     'EndeavourOS': 'EndeavourOS is Arch but without all the pain. Really king choice, I\'m on this distro myself :D!',
     'NixOS': 'NixOS is a Linux distribution based on Nix package manager. It\'s really cool if you like to manage your system with code and stuff',
     'Linux From Scratch': 'Linux From Scratch huh? So you have chosen death. Just kidding, this one is really cool if you want to learn how Linux works from the ground up',
+    'Serpent OS': 'Serpent OS is a Linux distribution that does not want to be categorized as "lightweight, user-friendly, etc". Interesting choice, check it out in a VM if you like to, or spin the Wheel again! :)!',
   };
 
 export default descriptions;

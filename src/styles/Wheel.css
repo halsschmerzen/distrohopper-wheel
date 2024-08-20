@@ -1,0 +1,12 @@
+.wheel-container {
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .spin-button {
+    margin-top: 1rem;
+    margin-bottom: 1rem; 
+  }

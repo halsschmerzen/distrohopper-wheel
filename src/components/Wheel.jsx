@@ -4,6 +4,7 @@ import { Button } from 'react95';
 import segments from "../data/segments";
 import easyModeSegments from "../data/easyModeSegments";
 import superEasyModeSegments from "../data/superEasyModeSegments";
+import '../styles/Wheel.css';
 
 const WheelComponent = ({ setResult, easyMode, superEasyMode }) => {
   const [mustSpin, setMustSpin] = useState(false);
@@ -23,7 +24,7 @@ const WheelComponent = ({ setResult, easyMode, superEasyMode }) => {
   };
 
   return (
-    <div style={{ textAlign: 'center', margin: '0 auto' }}>
+    <div className="wheel-container">
       <Wheel
         mustStartSpinning={mustSpin}
         prizeNumber={prizeNumber}
@@ -41,7 +42,7 @@ const WheelComponent = ({ setResult, easyMode, superEasyMode }) => {
         textDistance={65}
         onStopSpinning={handleStopSpinning}
       />
-      <Button onClick={handleSpinClick} disabled={mustSpin} style={{ marginTop: "20px" }}>
+      <Button onClick={handleSpinClick} disabled={mustSpin} className="spin-button">
         May luck decide your fate!
       </Button>
     </div>

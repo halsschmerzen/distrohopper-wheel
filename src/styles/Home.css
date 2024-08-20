@@ -1,42 +1,30 @@
-.window-content-p {
-  text-align: center;
-  font-weight: bold;
-  margin: 20px 0;
+
+/* CSS IS MAKING ME GO INSANE */
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  overflow: auto;
 }
-
-.result-window-p {
-  margin: 10px 0;
+#root {
+  display: flex;
+  flex-direction: column;
 }
-
-.result-window-p-info {
-  font-size: 12px;
-  font-weight: bold;
-  color: gray;
+.app-bar {
+  z-index: 1000;
 }
-
-@media (max-width: 768px) {
-  .window-content-p {
-    font-size: 14px;
-  }
-
-  .result-window-p {
-    font-size: 14px;
-  }
-
-  .result-window-p-info {
-    font-size: 10px;
-  }
+.toolbar {
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
-
-@keyframes shiny-sprinkles {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
+.toolbar-left {
+  display: flex;
+  align-items: center;
 }
-
+.toolbar-right {
+  display: flex;
+  align-items: center;
+}
 .source-text {
   font-weight: 900;
   margin-right: 6rem;
@@ -45,4 +33,182 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: shiny-sprinkles 25s linear infinite;
+}
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+.window {
+  flex: 1;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  max-height: 80vh;
+  top: 2rem;
+}
+.window-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.window-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+@media (min-width: 1081px) {
+  .window {
+    margin: 2rem 1.5rem;
+    top: 3rem;
+  }
+  .window-content {
+    padding: 0.5rem;
+    padding-bottom: 2rem;
+  }
+}
+@media (max-width: 1080px) {
+  .window {
+    margin: 2rem 1rem;
+    top: 2.5rem;
+  }
+  .window-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .window-content {
+    padding: 1rem;
+    padding-bottom: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .window {
+    margin: 1.5rem 1rem;
+    top: 2rem;
+  }
+  .window-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .window-content {
+    padding: 0.5rem;
+    padding-bottom: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .window {
+    margin: 1rem 0.5rem;
+    top: 1.5rem;
+  }
+  .window-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .window-content {
+    padding: 0.25rem;
+    padding-bottom: 2rem;
+  }
+}
+@media (max-width: 320px) {
+  .window {
+    margin: 0.5rem 0.25rem;
+    top: 1rem;
+  }
+  .window-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .window-content {
+    padding: 0.125rem;
+    padding-bottom: 1rem;
+  }
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+.result-window {
+  width: 90%;
+  max-width: 31.25rem;
+  z-index: 1010;
+}
+.result-window-content {
+  display: flex;
+  align-items: center;
+}
+.result-window-img {
+  width: 6.25rem;
+  height: 6.25rem;
+  margin-right: 0.625rem;
+}
+.confetti {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1009;
+}
+@media (max-width: 1080px) {
+  .result-window {
+    width: 80%;
+    max-width: 25rem;
+  }
+  .result-window-img {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+@media (max-width: 721px) {
+  .result-window {
+    width: 70%;
+    max-width: 18.75rem;
+  }
+  .result-window-img {
+    width: 3.75rem;
+    height: 3.75rem;
+  }
+}
+@media (max-width: 480px) {
+  .result-window {
+    width: 60%;
+    max-width: 12.5rem;
+  }
+  .result-window-img {
+    width: 3.125rem;
+    height: 3.125rem;
+  }
+}
+@media (max-width: 320px) {
+  .result-window {
+    width: 50%;
+    max-width: 10rem;
+  }
+  .result-window-img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+@keyframes shiny-sprinkles {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }

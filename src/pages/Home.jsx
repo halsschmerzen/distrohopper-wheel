@@ -30,21 +30,11 @@ const GlobalStyles = createGlobalStyle`
   html, body, #root {
     height: 100%;
     margin: 0;
+    overflow: hidden; /* Prevent overflow */
   }
   #root {
     display: flex;
     flex-direction: column;
-  }
-  @media (max-width: 768px) {
-    .window-content-p {
-      font-size: 12px;
-    }
-    .result-window-p {
-      font-size: 12px;
-    }
-    .result-window-p-info {
-      font-size: 10px;
-    }
   }
 `;
 
@@ -87,13 +77,12 @@ const Home = () => {
     <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
       <GlobalStyles />
       <ThemeProvider theme={original}>
-        <AppBar style={{zIndex: 1000}}>
-          <Toolbar style={{ justifyContent: 'space-between', flexWrap: 'wrap' }}>
-            <div style={{ display: 'flex', alignItems: 'center' }}>
+        <AppBar className="app-bar">
+          <Toolbar className="toolbar">
+            <div className="toolbar-left">
               <Button variant="menu" size="sm">
                 Start
               </Button>
-
               <Checkbox
                 label="Easy Mode"
                 checked={easyMode}
@@ -109,8 +98,8 @@ const Home = () => {
             </div>
             <div className="source-text">
               <a href="https://github.com/halsschmerzen/distrohopper-wheel"> ★ Leave a star on GitHub! I would really appreciate it ^-^ ★ </a>
-             </div>
-            <div style={{ display: 'flex', alignItems: 'center' }}>
+            </div>
+            <div className="toolbar-right">
               <Button variant="menu" size="sm">
                 File
               </Button>
@@ -136,11 +125,11 @@ const Home = () => {
             </div>
           </Toolbar>
         </AppBar>
-        <Window style={{ flex: 1, margin: '100px', display: 'flex', flexDirection: 'column', position: 'relative' }}>
-          <WindowHeader>
+        <Window className="window">
+          <WindowHeader className="window-header">
             <span>The amazing DistroHopper Wheel of Fortune! May the force be with you.</span>
           </WindowHeader>
-          <WindowContent style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+          <WindowContent className="window-content">
             <p className="window-content-p">Welcome to the DistroHopper Wheel of Fortune!
                 <br />
                 Now let fate decide which Linux Distro you use next!
@@ -157,14 +146,14 @@ const Home = () => {
             />
           </WindowContent>
           {showResultWindow && (
-            <>
-              <Window style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '90%', maxWidth: '500px', zIndex: 10 }}>
+            <div className="modal">
+              <Window className="result-window">
                 <WindowHeader>
                   <span>Your wonderful, amazing, perfect result!</span>
                   <Button onClick={handleCloseResultWindow} style={{ float: 'right' }}>X</Button>
                 </WindowHeader>
-                <WindowContent style={{ display: 'flex', alignItems: 'center' }}>
-                  <img src={Tux} alt="Tux" style={{ width: '100px', height: '100px', marginRight: '10px' }} />
+                <WindowContent className="result-window-content">
+                  <img src={Tux} alt="Tux" className="result-window-img" />
                   <div>
                     <p className="result-window-p">{`You won: ${result}`}</p>
                     <p className="result-window-p">{descriptions[result]}</p>
@@ -173,8 +162,8 @@ const Home = () => {
                   </div>
                 </WindowContent>
               </Window>
-              <Confetti style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 9 }} />
-            </>
+              <Confetti className="confetti" />
+            </div>
           )}
         </Window>
       </ThemeProvider>

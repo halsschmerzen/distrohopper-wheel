@@ -61,7 +61,7 @@ Once the development server is running, you can start using the DistroHopper Whe
 You can customize the behavior of the wheel and other features by modifying the configuration files:
 
 - **[`src/data/descriptions.js`]**: Contains descriptions for each Linux distribution.
-- **[`src/data/segments.css`]**: Customize the segments for the wheel.
+- **[`src/data/segments.js`]**: Customize the segments for the wheel.
 
 ## Contributing
 

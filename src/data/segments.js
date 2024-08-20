@@ -14,10 +14,11 @@ const segments = [
   { option: 'MX Linux', style: { backgroundColor: '#E95600' } },
   { option: 'Gentoo', style: { backgroundColor: '#54487A' } },
   { option: 'Slackware', style: { backgroundColor: '#1E90FF' } },
-  { option: 'Void Linux', style: { backgroundColor: '#000000' } },
+  { option: 'Void Linux', style: { backgroundColor: '#222222' } },
   { option: 'Alpine Linux', style: { backgroundColor: '#0D597F' } },
   { option: 'NixOS', style: { backgroundColor: '#5277C3' } },
   { option: 'Linux From Scratch', style: { backgroundColor: '#F9A01B' } },
+  { option: 'Serpent OS', style: { backgroundColor: '#000000' } },
 ];
 
 export default segments;

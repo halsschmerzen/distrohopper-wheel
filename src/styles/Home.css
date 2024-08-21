@@ -1,18 +1,5 @@
 
 /* CSS IS MAKING ME GO INSANE */
-
-html, body, #root {
-  height: 100%;
-  margin: 0;
-  overflow: auto;
-}
-#root {
-  display: flex;
-  flex-direction: column;
-}
-.app-bar {
-  z-index: 1000;
-}
 .toolbar {
   justify-content: space-between;
   flex-wrap: wrap;
@@ -41,19 +28,11 @@ html, body, #root {
   overflow: auto;
 }
 .window {
-  flex: 1;
-  margin: 1rem;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  z-index: 1;
-  max-height: 80vh;
-  top: 2rem;
+  max-height: 85vh;
+  overflow: scroll; /* Wheel shouldnt leave it's container */
 }
 .window-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  overflow: hidden;
 }
 .window-content {
   flex: 1;

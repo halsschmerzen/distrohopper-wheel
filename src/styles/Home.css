@@ -27,7 +27,8 @@
   overflow: auto;
 }
 .window {
-  max-height: 85vh;
+  margin-top: 0 !important;
+  max-height: 86vh;
   overflow: scroll; /* Wheel shouldnt leave it's container */
 }
 .window-header {

@@ -8,5 +8,6 @@
   
   .spin-button {
     margin-top: 1rem;
-    margin-bottom: 1rem; 
+    margin-bottom: 1rem;
+    overflow: hidden;
   }

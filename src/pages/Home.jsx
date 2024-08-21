@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { AppBar, Toolbar, Button, Window, WindowHeader, WindowContent, styleReset, MenuList, MenuListItem, Checkbox } from 'react95';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import original from 'react95/dist/themes/original';
@@ -26,15 +26,6 @@ const GlobalStyles = createGlobalStyle`
   }
   body, input, select, textarea {
     font-family: 'ms_sans_serif';
-  }
-  html, body, #root {
-    height: 100%;
-    margin: 0;
-    overflow: hidden; /* Prevent overflow */
-  }
-  #root {
-    display: flex;
-    flex-direction: column;
   }
 `;
 
@@ -74,7 +65,7 @@ const Home = () => {
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+    <>
       <GlobalStyles />
       <ThemeProvider theme={original}>
         <AppBar className="app-bar">
@@ -127,7 +118,7 @@ const Home = () => {
         </AppBar>
         <Window className="window">
           <WindowHeader className="window-header">
-            <span>The amazing DistroHopper Wheel of Fortune! May the force be with you.</span>
+            The amazing DistroHopper Wheel of Fortune! May the force be with you.
           </WindowHeader>
           <WindowContent className="window-content">
             <p className="window-content-p">Welcome to the DistroHopper Wheel of Fortune!
@@ -158,7 +149,7 @@ const Home = () => {
                     <p className="result-window-p">{`You won: ${result}`}</p>
                     <p className="result-window-p">{descriptions[result]}</p>
                     <br/>
-                    <p className="result-window-p-info">Here could be a little pixelart of each Distro, but I haven't found a nice collection of Linux Distro pixelarts! =(! So for now enjoy the little tux.</p>
+                    <p className="result-window-p-info">Here could be a little pixelart of each Distro, but I haven&apos;t found a nice collection of Linux Distro pixelarts! =(! So for now enjoy the little tux.</p>
                   </div>
                 </WindowContent>
               </Window>
@@ -167,7 +158,7 @@ const Home = () => {
           )}
         </Window>
       </ThemeProvider>
-    </div>
+    </>
   );
 };
 

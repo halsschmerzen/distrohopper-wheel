@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Wheel } from "react-custom-roulette";
 import { Button } from 'react95';
 import segments from "../data/segments";
 import easyModeSegments from "../data/easyModeSegments";
 import superEasyModeSegments from "../data/superEasyModeSegments";
 import '../styles/Wheel.css';
+import PropTypes from 'prop-types';
 
 const WheelComponent = ({ setResult, easyMode, superEasyMode }) => {
   const [mustSpin, setMustSpin] = useState(false);
@@ -48,5 +49,12 @@ const WheelComponent = ({ setResult, easyMode, superEasyMode }) => {
     </div>
   );
 };
+
+// Prop Validation
+WheelComponent.propTypes = {
+  setResult: PropTypes.func.isRequired,
+  easyMode: PropTypes.bool,
+  superEasyMode: PropTypes.bool
+}
 
 export default WheelComponent;

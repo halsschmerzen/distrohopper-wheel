@@ -19,6 +19,7 @@ const descriptions = {
     'NixOS': 'NixOS is a Linux distribution based on Nix package manager. It\'s really cool if you like to manage your system with code and stuff',
     'Linux From Scratch': 'Linux From Scratch huh? So you have chosen death. Just kidding, this one is really cool if you want to learn how Linux works from the ground up',
     'Serpent OS': 'Serpent OS is a Linux distribution that supports rollbacks if an update inevitably breaks it due to its pre-alpha state. Check it out in a virtual machine if you like to, or spin the Wheel again! :)',
+    'CachyOS': 'CachyOS offers the full power and flexibility of Arch Linux with great optimizations. It\'s basically Arch but more practical to use. You can even convert your Arch or EndeavourOS install into CachyOS!',
   };
 
 export default descriptions;

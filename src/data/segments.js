@@ -19,6 +19,7 @@ const segments = [
   { option: 'NixOS', style: { backgroundColor: '#5277C3' } },
   { option: 'Linux From Scratch', style: { backgroundColor: '#F9A01B' } },
   { option: 'Serpent OS', style: { backgroundColor: '#000000' } },
+  { option: 'CachyOS', style: { backgroundColor: '#00aa88' } }
 ];
 
 export default segments;
